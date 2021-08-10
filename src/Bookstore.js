@@ -32,13 +32,14 @@ function Bookstore() {
         </section>
     )
 }
-const Book = (props) => {
+const Book = ({img,title,author,quality,price}) => {
+    //const{img,title,author,quality,price}=props; //this is just a another way to use props
     return <article className='book'>
-        <img src={props.img}></img>
-        <h1>{props.title}</h1>
-        <h1>{props.quality}</h1>
-        <h3>{props.author}</h3>
-        <h3>{props.price}</h3>
+        <img src={img}></img>
+        <h1>{title}</h1>
+        <h1>{quality}</h1>
+        <h3>{author}</h3>
+        <h3>{price}</h3>
     </article>
 }
 export default Bookstore
