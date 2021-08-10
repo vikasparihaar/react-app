@@ -1,19 +1,17 @@
-import { directive, react } from "@babel/types";
 import React from "react";
 import { render } from "react-dom";
 
-function firstComponent() {
+function FirstComponent() {
     return (
-        <react.Fragment>
+        <React.Fragment>
         <div>
-            <p>
-                this is my first para
-            </p>
+            <h2>
+                this is my first component using function component
+                <img src="elp.jpg" alt="the elephant" width="500" height="320"></img>
+            </h2>
 
         </div>
-        <div>
-
-        </div>
-        </react.Fragment>
+        </React.Fragment>
     )
 }
+export default FirstComponent
