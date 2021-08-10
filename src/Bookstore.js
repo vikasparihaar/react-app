@@ -1,40 +1,44 @@
 import react from 'react'
-import"./index.css"
+import "./index.css"
+
+const FirstBook = {
+    img: "https://images-eu.ssl-images-amazon.com/images/I/710jnzKlDTL._AC_UL200_SR200,200_.jpg",
+    title: "Attitude Is Everything: Change Your Attitude ... Change Your Life! ",
+    author: "Jeff keller",
+    quality: "Ppaerback",
+    price: "$9"
+}
+const SecondBook = {
+    img: "https://images-eu.ssl-images-amazon.com/images/I/81NYuWzsJcS._AC_UL200_SR200,200_.jpg",
+    title: "The Richest Man in Babylon",
+    author: "George classon",
+    quality: "Paperback",
+    price: "$9"
+}
+const ThirdBook = {
+    img: "https://images-eu.ssl-images-amazon.com/images/I/81%2Bx6eHkSdS._AC_UL200_SR200,200_.jpg",
+    title: "Wuthering Heights",
+    author: "Emily Bronte",
+    quality: "Paperback",
+    price: "$8"
+}
 
 function Bookstore() {
     return (
         <section className="booklist">
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            
-            
+            <Book img={FirstBook.img} title={FirstBook.title} author={FirstBook.author} quality={FirstBook.quality} price={FirstBook.price}></Book>
+            <Book img={SecondBook.img} title={SecondBook.title} author={SecondBook.author} quality={SecondBook.quality} price={SecondBook.price}></Book>
+            <Book img={ThirdBook.img} title={ThirdBook.title} author={ThirdBook.author} quality={ThirdBook.quality} price={ThirdBook.price}></Book>
         </section>
     )
 }
-const Book = () => {
-    return <article><Img />
-    <Author />
-    <Title />
-    <Qulaity />
-    <Price />
-    
-        
+const Book = (props) => {
+    return <article className='book'>
+        <img src={props.img}></img>
+        <h1>{props.title}</h1>
+        <h1>{props.quality}</h1>
+        <h3>{props.author}</h3>
+        <h3>{props.price}</h3>
     </article>
 }
-
-const Img = () =>  <img src="https://images-eu.ssl-images-amazon.com/images/I/71aFt4%2BOTOL.
-_AC_UL200_SR200,200_.jpg" alt=""></img>
-const Author = () => <h1>Paulo coelho</h1>
-const Title = () => <h2>The Alchemist  </h2>
-const Qulaity = () => <h1>Paperback</h1>
-const Price = () => <h3>$7.00</h3>
-
-
 export default Bookstore
